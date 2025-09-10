@@ -1,0 +1,38 @@
+:root{
+    --primary-color: #071229; 
+    --secondary-color: #718093;
+    --main-color: #fbfcff;
+}
+
+
+
+footer {
+        color: var(--main-color);
+        background-color: var(--primary-color);
+        padding: 1rem; 
+        border-radius: 40px 0 40px 0;
+        text-align: left;
+        }
+   
+.container{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.SISTIM{
+    text-align: center;
+    background-color: #718093;
+}
+
+    
+    
+
+       

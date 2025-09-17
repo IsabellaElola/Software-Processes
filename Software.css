@@ -4,6 +4,64 @@
     --main-color: #fbfcff;
 }
 
+@font-face {
+    font-family:'ggg' ;
+    src: url(./RobotoSlab-Regular.ttf);
+}
+
+h1 {
+  text-align: center;
+}
+
+section h1{
+    background-color:var(--primary-color);
+    color: var(--main-color);
+    font-size: x-large;
+    padding: 5%;
+    padding: 1rem; 
+    border-radius: 40px 0 40px 0;
+    text-align: left;
+    text-align: center;
+
+}
+
+
+
+.main{ 
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background: rgba(0, 0, 0, 0.5); 
+  color: var(--main-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+nav ul  {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+
+
+}
+
+nav li{
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #57564F;
+    h4 {color :var(--main-color)} 
+    background-image: url('img.softwarebg.jpg');
+    color: var(--main-color);
+    font-family: 'ggg';
+}
+
+
+
 
 
 footer {
@@ -29,7 +87,7 @@ footer {
 
 .SISTIM{
     text-align: center;
-    background-color: #718093;
+    color: var(--secondary-color);
 }
 
     

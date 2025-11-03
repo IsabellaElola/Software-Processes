@@ -811,40 +811,36 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                <!-- Card 1 -->
-                <div class="group bg-white p-6 rounded-2xl shadow-md border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
-                    <details class="w-full">
-                        <summary class="flex items-center space-x-4 list-none">
-                            <div class="text-blue-600 text-3xl">✅</div>
-                            <h3 class="text-xl font-semibold text-blue-900 group-hover:text-blue-600">Advantages</h3>
-                        </summary>
-                        <div class="mt-4 text-gray-700 text-justify leading-relaxed space-y-2">
-                            <p>✔ Reduces cost and development effort</p>
-                            <p>✔ Faster delivery of software</p>
-                            <p>✔ Lower risks due to pre-tested components</p>
-                        </div>
-                    </details>
-                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+    <!-- Advantages -->
+    <details class="group bg-white p-6 rounded-2xl shadow-md border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+        <summary class="flex items-center space-x-4 cursor-pointer">
+            <span class="text-blue-600 text-3xl">✅</span>
+            <h3 class="text-xl font-semibold text-blue-900 group-hover:text-blue-600">Advantages</h3>
+        </summary>
+        <div class="mt-4 text-gray-700 text-justify leading-relaxed space-y-2">
+            <p>✔ Reduces cost and development effort</p>
+            <p>✔ Faster delivery of software</p>
+            <p>✔ Lower risks due to pre-tested components</p>
+        </div>
+    </details>
 
-                 <!-- Card 2 -->
-                <div class="group bg-white p-6 rounded-2xl shadow-md border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer mb-4">
-                    <details class="w-full">
-                        <summary class="flex items-center space-x-4 list-none">
-                            <div class="text-blue-600 text-3xl">⚠️</div>
-                            <h3 class="text-xl font-semibold text-blue-900 group-hover:text-blue-600">Disadvantages</h3>
-                        </summary>
-                        <div class="mt-4 text-gray-700 text-justify leading-relaxed space-y-2">
-                            <p>⚠ May not fully meet user requirements</p>
-                            <p>⚠ Dependency on third-party components</p>
-                            <p>⚠ Harder to control evolution and updates</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
+    <!-- Disadvantages -->
+    <details class="group bg-white p-6 rounded-2xl shadow-md border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+        <summary class="flex items-center space-x-4 cursor-pointer">
+            <span class="text-blue-600 text-3xl">⚠️</span>
+            <h3 class="text-xl font-semibold text-blue-900 group-hover:text-blue-600">Disadvantages</h3>
+        </summary>
+        <div class="mt-4 text-justify leading-relaxed space-y-2">
+            <p>⚠ May not fully meet user requirements</p>
+            <p>⚠ Dependency on third-party components</p>
+            <p>⚠ Harder to control evolution and updates</p>
+        </div>
+    </details>
+</div>
 
             <!-- Extra Info with Highlight -->
-            <div class="mt-10 p-6 bg-blue-800 text-white rounded-xl shadow-md hover:scale-[1.02] transition duration-300">
+            <div class="mt-4 p-6 bg-blue-800 text-white rounded-xl shadow-md hover:scale-[1.02] transition duration-300">
                 <p class="text-justify leading-relaxed text-blue-600">
                     Software reuse is highly important, and multiple chapters in the book are devoted to it. Chapter 16 explores general software reuse and COTS systems, Chapters 17 and 18 focus on component-based software engineering, and Chapter 19 discusses service-oriented systems.
                 </p>
@@ -855,17 +851,22 @@
         </main>
 
         
-        
-     <section class="rounded-xl p-6 shadow-lg border border-blue-200 mb-8 border-4">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+<section class="rounded-xl p-6 shadow-lg border border-blue-200 mb-8 border-4">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-blue-900">Our Team</h2>
-          <p class="font-light  lg:mb-16 sm:text-xl dark:text-gray-800">Our strength lies in teamwork, creativity, and the pursuit of continuous improvement. Together, we make things happen — one idea, one project, one goal at a time. combine</p>
+          <p class="font-light lg:mb-16 sm:text-xl dark:text-gray-800">
+              Our strength lies in teamwork, creativity, and the pursuit of continuous improvement.
+              Together, we make things happen — one idea, one project, one goal at a time.
+          </p>
       </div> 
+
       <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-          <div class="items-center bg-gray-800 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+
+          <!-- Member 1 -->
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="https://www.facebook.com/matjannus">
-                  <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/DE GUZMAN.jpg" alt="Mat Jannus S. De Guzman">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/DE GUZMAN.jpg" alt="Mat Jannus S. De Guzman">
               </a>
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -875,11 +876,12 @@
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Skilled in web design and development, creating responsive and user-friendly websites.</p>
               </div>
           </div> 
+
+          <!-- Member 2 -->
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/LAGURAS.jpg" alt="Hazel V. Laguras">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/LAGURAS.jpg" alt="Hazel V. Laguras">
               </a>
-
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                       <a href="https://www.facebook.com/hzllgrs">Hazel V. Laguras</a>
@@ -888,21 +890,25 @@
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Proficient in project management and documentation, keeping the team organized and the project on track.</p>
               </div>
           </div> 
+
+          <!-- Member 3 -->
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="">
-                  <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/MPATAL.jpg" alt="Mark Angelo G. Patal">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/MPATAL.jpg" alt="Mark Angelo G. Patal">
               </a>
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="https://www.facebook.com/angelo.patal.71">Mark Angelo G.Patal</a>
+                      <a href="https://www.facebook.com/angelo.patal.71">Mark Angelo G. Patal</a>
                   </h3>
                   <span class="text-gray-500 dark:text-gray-400">BSIT | 3102</span>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Focused on programming and system logic, turning ideas into functional applications.</p>
               </div>
           </div> 
+
+          <!-- Member 4 -->
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="">
-                  <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/ELOLA.jpg" alt="Isabella Grace M. Elola">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/ELOLA.jpg" alt="Isabella Grace M. Elola">
               </a>
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -912,6 +918,7 @@
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Passionate about web design and continuously learning to improve skills.</p>
               </div>
           </div>  
+
       </div>  
   </div>
 </section>

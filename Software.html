@@ -1,297 +1,966 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 2.2 – Process Activities</title>
-  <link rel="stylesheet" href="src/output.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Fade-in Animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s ease-out;
-    }
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Image Design */
-    .image-frame {
-      position: relative;
-      overflow: hidden;
-      border-radius: 1rem;
-      background: linear-gradient(to bottom right, #e0f2fe, #f8fafc);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .image-frame:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    }
-    .image-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900">
-
-  <!-- HEADER -->
-  <div class="bg-blue-800 text-white fixed top-0 w-full z-50 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center px-4 py-3">
-      <div class="flex items-center space-x-2 font-bold text-lg sm:text-xl">
-        <img src="src/assets/images/icon.png" alt="Icon" class="w-8 h-8">
-        <span>Software Processes</span>
-      </div>
-
-      <div class="hidden md:flex space-x-6 text-sm font-medium">
-        <div><a href="/Software.html" class="hover:text-blue-200">Chapter 2.1</a></div>
-        <div><a href="/process activities.html" class="text-blue-200 font-semibold">Chapter 2.2</a></div>
-        <div><a href="/Coping with change.html" class="hover:text-blue-200">Chapter 2.3</a></div>
-        <div><a href="/UnfiedProcess.html" class="hover:text-blue-200">Chapter 2.4</a></div>
-      </div>
-
-      <button id="menuBtn" class="md:hidden focus:outline-none">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-
-    <div id="mobileMenu" class="hidden bg-blue-700 flex flex-col space-y-2 p-4 md:hidden">
-      <div><a href="/Software.html" class="hover:text-blue-200">Chapter 2.1</a></div>
-      <div><a href="/process activities.html" class="text-blue-200 font-semibold">Chapter 2.2</a></div>
-      <div><a href="/Coping with change.html" class="hover:text-blue-200">Chapter 2.3</a></div>
-      <div><a href="/UnfiedProcess.html" class="hover:text-blue-200">Chapter 2.4</a></div>
-    </div>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <div class="container mx-auto px-6 pt-28 pb-20 leading-relaxed max-w-5xl space-y-14">
-
-    <div class="text-center text-4xl font-bold text-blue-800 mb-10 fade-in">Process Activities</div>
-
-    <!-- INTRO -->
-    <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
-  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
-    “Real software processes are interleaved sequences of technical, collaborative, and managerial activities
-    aimed at specifying, designing, implementing, and testing software systems.”
-  </div>
-</div>
 
 
-    <!-- 2.2.1 -->
-    <div class="fade-in">
-      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.1 Software Specification</div>
-      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
-  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
-    “Software specification defines system services and constraints. It involves
-    understanding user needs and translating them into clear, testable requirements.”
-  </div>
-</div>
-
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 111.png" alt="Specification">
+  <!-- Header / Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg fixed w-full  ">
+    <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+      
+        <!-- Logo -->
+        <div class="flex items-center space-x-3 min-w-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+            <span class="text-blue-800 font-bold text-sm sm:text-base">SP</span>
+          </div>
+          <div class="min-w-0">
+            <h1 class="font-bold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl truncate">
+              Software Processes
+            </h1>
+          </div>
         </div>
+
+      <!-- Links -->
+      <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+        <ul class="hidden md:flex space-x-8 text-l">
+        <li><a href="/Software.html" className="hover:text-blue-400 transition">Chapter 2.1</a></li>
+              <li><a href="/process activities.html" className="hover:text-blue-400 transition">Chapter 2.2</a></li>
+              <li><a href="/Coping with change.html" className="hover:text-blue-400 transition">Chapter 2.3</a></li>
+              <li><a href="/UnfiedProcess.html" className="hover:text-blue-400 transition">Chapter 2.4</a></li>
+        </ul>
       </div>
 
-      <div class="pl-6 grid gap-4 sm:grid-cols-2 mt-6">
-  <div class="p-4 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-blue-700 font-semibold mb-1">1. Feasibility Study</div>
-    <div class="text-gray-700 text-sm">
-      Evaluates whether the proposed system can be built within technical and financial limits.
-    </div>
-  </div>
+      <!-- Right side -->
+      <div class="flex items-center gap-6">
+        <button onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden">☰</button>
+      </div>
+    </nav>
+  </header>
 
-  <div class="p-4 rounded-xl bg-gradient-to-br from-green-100 to-green-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-green-700 font-semibold mb-1">2. Requirements Elicitation & Analysis</div>
-    <div class="text-gray-700 text-sm">
-      Involves gathering, understanding, and analyzing stakeholder needs and system requirements.
-    </div>
-  </div>
+  <body class="bg-blue-200 font-sans">
 
-  <div class="p-4 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-purple-700 font-semibold mb-1">3. Requirements Specification</div>
-    <div class="text-gray-700 text-sm">
-      Converts gathered requirements into an organized, documented specification for developers.
+  <!-- Hero Section -->
+  <section class="w-full bg-blue-200 text-white py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center animate-pulse">
+      <div class="max-w-6xl mx-auto px-6 text-center animate-[pulse_1.5s_ease-in-out_1]"></div>
+    <h1 class="text-4xl md:text-5xl font-extrabold fade-in-up text-blue-900 font-sans mt-12">
+        Let’s Get to Know More About <span class="text-blue-900">Software Engineering-9</span>
+      </h1>
+      <p class="mt-4 text-lg text-blue-900 fade-in-up text-blue-900 mt-4" style="animation-delay: 0.3s;">
+        Discover the process, importance, and real-world application of Software Engineering in today’s technology-driven world.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <div class="p-4 rounded-xl bg-gradient-to-br from-pink-100 to-pink-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-pink-700 font-semibold mb-1">4. Requirements Validation</div>
-    <div class="text-gray-700 text-sm">
-      Ensures the requirements are realistic, complete, consistent, and meet user expectations.
+
+
+<section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <!-- Text Content -->
+            <div class="space-y-4">
+                <h2 class="text-3xl font-bold text-blue-900">
+                    What is <span class="text-blue-600">Software Engineering?</span>
+                </h2>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    A software process is a set of related activities that leads to the production of a software product. These activities may involve the development of software from scratch
+                    in a standard programming language like Java or C. However, business applications
+                    are not necessarily developed in this way. New business software is now often developed by extending and modifying existing systems or by configuring and integrating
+                    off-the-shelf software or system components.
+                </p>
+            </div>
+
+             <!-- Image or Card -->
+            <div class="flex justify-center">
+                <div class="bg-white shadow-xl rounded-2xl p-6 w-80 md:w-96">
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Software Process Phases</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>✅ Planning</li>
+                        <li>✅ Analysis and Design</li>
+                        <li>✅ Implementation</li>
+                        <li>✅ Testing and Deployment</li>
+                        <li>✅ Maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-8">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="border border-blue-200 rounded-lg">
+                    <summary class="px-4 py-3 bg-blue-50 hover:bg-blue-100 font-semibold text-blue-900 cursor-pointer">
+                        What are the key phases in software engineering?
+                    </summary>
+                    <div class="px-4 py-3 text-gray-700">
+                        The key phases include planning, analysis, design, implementation, testing, deployment, and maintenance.
+                    </div>
+                </details>
+                <details class="border border-blue-200 rounded-lg">
+                    <summary class="px-4 py-3 bg-blue-50 hover:bg-blue-100 font-semibold text-blue-900 cursor-pointer">
+                        Why is software engineering important?
+                    </summary>
+                    <div class="px-4 py-3 text-gray-700">
+                        It ensures software is reliable, efficient, and meets user requirements, reducing errors and improving productivity.
+                    </div>
+                </details>
+
+                  <details class="border border-blue-200 rounded-lg">
+                    <summary class="px-4 py-3 bg-blue-50 hover:bg-blue-100 font-semibold text-blue-900 cursor-pointer">
+                        What skills are needed for software engineering?
+                    </summary>
+                    <div class="px-4 py-3 text-gray-700">
+                        Skills include programming languages, problem-solving, teamwork, and knowledge of tools like version control and testing frameworks.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto text-center px-2">
+
+       <div>
+        <h1 class=" font-bold text-blue-900 mt-12">There are many different software processes but all must include four activities
+        that are fundamental to software engineering:</h1>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+
+        <div class="bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-md hover:shadow-lg transition p-8">
+          <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-500 rounded-full flex items-center justify-center text-2xl">
+            🔧
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Software specification</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            The functionality of the software and constraints on its
+            operation must be defined.
+          </p>
+        </div>
+     
+        <div class="bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-md hover:shadow-lg transition p-8">
+          <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-500 rounded-full flex items-center justify-center text-2xl">
+            💼
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Software design and implementation</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            The software to meet the specification
+            must be produced.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-md hover:shadow-lg transition p-8">
+          <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-500 rounded-full flex items-center justify-center text-2xl">
+            💻
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Software validation</h3>
+          <p class="text-sm text-gray-600 mt-2">
+           The software must be validated to ensure that it does what
+            the customer wants.
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-md hover:shadow-lg transition p-8">
+          <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-500 rounded-full flex items-center justify-center text-2xl">
+            💻
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Software evolution</h3>
+          <p class="text-sm text-gray-600 mt-2">
+           The software must evolve to meet changing customer needs.
+        </div>
+
+      </div>
     </div>
+
+     <section class="py-16 sm:py-20 bg-gradient-to-br from-blue-200 to-white mt-6">
+      <div class="container mx-auto px-8 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-lg text-gray-800 mb-2 text-justify mb-6 font-serif leading-relaxed font-medium ">In some form, these activities are part of all software processes. In practice, of
+        course, they are complex activities in themselves and include sub-activities such as
+        requirements validation, architectural design, unit testing, etc. There are also supporting process activities such as documentation and software configuration management.When we describe and discuss processes, we usually talk about the activities in
+        these processes such as specifying a data model, designing a user interface, etc., and
+        the ordering of these activities. </h2>
+        <p class="text-3xl sm:text-4xl font-bold text-blue-800 mb-8 font-serif">Process descriptions
+          may also include:
+        </p>
+      </div>
+       
+     <section class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 mt-6 bg-gray-100 p-8x">
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-lg font-semibold mb-2  text-blue-900 font-serif">Products:</h2>
+      <p class="text-gray-600 text-sm leading-relaxed">
+       which are the outcomes of a process activity. For example, the outcome of the activity of architectural design may be a model of the software
+      architecture.
+
+      </p>
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-lg font-semibold mb-2 text-blue-900 font-serif">Roles:</h2>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        which reflect the responsibilities of the people involved in the process.
+        Examples of roles are project manager, configuration manager, programmer, etc.
+      </p>
+    </div>
+    <div class="bg-white p-6 rounded shadow ">
+      <h2 class="text-lg font-semibold mb-2  text-blue-900 ">Pre- and post-conditions:</h2>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        which are statements that are true before and after a
+        process activity has been enacted or a product produced. For example, before
+        architectural design begins, a pre-condition may be that all requirements have
+        been approved by the customer; after this activity is finished, a post-condition
+        might be that the UML models describing the architecture have been reviewed.
+      </p>
+    </div>
+  </section>
+
+   <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Title -->
+            <h1 class="text-4xl font-bold text-blue-900 text-center mb-8">
+                Understanding <span class="text-blue-600">Software Processes</span>
+            </h1>
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <p class="text-gray-700 text-justify leading-relaxed">
+                        Software processes are complex and, like all intellectual and creative processes,
+                        rely on people making decisions and judgments. There is no ideal process and most
+                        organizations have developed their own software development processes. Processes
+                        have evolved to take advantage of the capabilities of the people in an organization
+                        and the specific characteristics of the systems that are being developed.
+                    </p>
+                  
+                     <p class="text-gray-700 text-justify leading-relaxed">
+                        For some systems, such as critical systems, a very structured development process is required.
+                        For business systems, with rapidly changing requirements, a less formal, flexible
+                        process is likely to be more effective.
+                    </p>
+                    <p class="text-gray-700 text-justify leading-relaxed">
+                        Sometimes, software processes are categorized as either plan-driven or agile
+                        processes. Plan-driven processes are processes where all of the process activities are
+                        planned in advance and progress is measured against this plan. In agile processes,
+                        which I discuss in Chapter 3, planning is incremental and it is easier to change the
+                        process to reflect changing customer requirements.
+                    </p>
+                    <p class="text-gray-700 text-justify leading-relaxed">
+                        As Boehm and Turner (2003) discuss, each approach is suitable for different types of software. Generally, you
+                        need to find a balance between plan-driven and agile processes.
+                    </p>
+
+                    <p class="text-gray-700 text-justify leading-relaxed">
+                        Although there is no ‘ideal’ software process, there is scope for improving the
+                        software process in many organizations. Processes may include outdated techniques
+                        or may not take advantage of the best practice in industrial software engineering.
+                        Indeed, many organizations still do not take advantage of software engineering
+                        methods in their software development.
+                    </p>
+                    <p class="text-gray-700 text-justify leading-relaxed">
+                        Software processes can be improved by process standardization where the diversity in software processes across an organization is reduced. This leads to improved
+                        communication and a reduction in training time, and makes automated process support more economical. Standardization is also an important first step in introducing
+                        new software engineering methods and techniques and good software engineering
+                        practice. I discuss software process improvement in more detail in Chapter 26.
+                    </p>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="bg-white shadow-xl rounded-2xl p-6 w-full max-w-md hover:shadow-2xl transition-shadow">
+                        <h3 class="text-xl font-bold text-blue-900 mb-4">Process Categories</h3>
+                        <div class="space-y-4">
+                            <details class="border border-blue-200 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+                                <summary class="px-4 py-3 font-semibold text-blue-900 cursor-pointer">
+                                    Plan-Driven Processes
+                                </summary>
+                                <div class="px-4 py-3 text-gray-700">
+                                    All activities are planned in advance, and progress is measured against the plan. Suitable for critical systems requiring structure.
+                                </div>
+                            </details>
+                         <details class="border border-blue-200 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+                                <summary class="px-4 py-3 font-semibold text-blue-900 cursor-pointer">
+                                    Agile Processes
+                                </summary>
+                                <div class="px-4 py-3 text-gray-700">
+                                    Planning is incremental, allowing easier changes to reflect customer requirements. Ideal for business systems with evolving needs.
+                                </div>
+                            </details>
+                            <details class="border border-blue-200 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+                                <summary class="px-4 py-3 font-semibold text-blue-900 cursor-pointer">
+                                    Process Improvement
+                                </summary>
+                                <div class="px-4 py-3 text-gray-700">
+                                    Involves standardization to reduce diversity, improve communication, and introduce best practices in software engineering.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </section>
+    
+
+    
+
+    <!-- Process Models Section -->
+    <section class="py-10">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <!-- Section Subtitle -->
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-800 mb-8 font-serif">
+          The process models that I cover here are:
+        </h2>
+
+        <!-- Responsive Grid: 1 col (mobile), 2 cols (tablet), 3 cols (laptop/desktop) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Waterfall Model -->
+          <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div class="text-justify">
+              <p class="font-bold text-blue-900 mb-3 text-lg">The Waterfall Model:</p>
+              <p class="text-gray-800 leading-relaxed mb-4">
+                This takes the fundamental process activities of specification, development, validation, and evolution and represents them as separate
+                process phases such as requirements specification, software design, implementation, testing, and so on.
+              </p>
+              <img src="/src/assets/images/1stpic.PNG" alt="Waterfall Model Diagram"
+                   class="mx-auto mt-3 block rounded-lg shadow-md w-3/4">
+            </div>
+          </div>
+
+          <!-- Incremental Development -->
+          <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div class="text-justify">
+              <p class="font-bold text-blue-900 mb-3 text-lg">Incremental Development:</p>
+              <p class="text-gray-800 leading-relaxed">
+                This approach interleaves the activities of specification, development, and validation. The system is developed as a series of versions
+                (increments), with each version adding functionality to the previous version.
+              </p>
+            </div>
+          </div>
+
+          <!-- Reuse-Oriented Software Engineering -->
+          <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div class="text-justify">
+              <p class="font-bold text-blue-900 mb-3 text-lg">Reuse-Oriented Software Engineering:</p>
+              <p class="text-gray-800 leading-relaxed">
+                This approach is based on the existence of a significant number of reusable components. The system development process
+                focuses on integrating these components into a system rather than developing them from scratch.
+              </p>
+            </div>
+          </div>
+
+        </div> <!-- end of grid -->
+
+        <div class="w-full px-4 sm:px-8 lg:px-16 flex justify-center">
+  <div class="mt-12 bg-gray-100/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg 
+              hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] 
+              max-w-6xl w-full">
+    <p class="text-gray-800 text-justify leading-relaxed font-medium 
+              hover:text-blue-800 transition-all duration-300">
+      These models are not mutually exclusive and are often used together, especially
+      for large systems development. For large systems, it makes sense to combine some
+      of the best features of the waterfall and the incremental development models. You
+      need to have information about the essential system requirements to design a software architecture to support these requirements. You cannot develop this incrementally. 
+      Sub-systems within a larger system may be developed using different approaches. 
+      Parts of the system that are well understood can be specified and developed using 
+      a waterfall-based process. Parts of the system which are difficult to specify in 
+      advance, such as the user interface, should always be developed using an incremental approach.
+    </p>
   </div>
 </div>
-
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 222.png" alt="Requirements Engineering">
-        </div>
-      </div>
-    </div>
-
-    <!-- 2.2.2 -->
-    <div class="fade-in">
-      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.2 Software Design and Implementation</div>
-      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
-  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
-    “Design and implementation transform specifications into an executable system.
-    These processes often overlap and interact frequently.”
-  </div>
-</div>
-
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 333.png" alt="Design">
-        </div>
-      </div>
-
-      <div class="pl-6 grid gap-4 sm:grid-cols-2 mt-6">
-  <div class="p-4 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-blue-700 font-semibold mb-1">1. Architectural Design</div>
-    <div class="text-gray-700 text-sm">
-      Defines the overall structure of the system and identifies the major components.
-    </div>
-  </div>
-
-  <div class="p-4 rounded-xl bg-gradient-to-br from-green-100 to-green-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-green-700 font-semibold mb-1">2. Interface Design</div>
-    <div class="text-gray-700 text-sm">
-      Specifies how system components interact and communicate with each other.
-    </div>
-  </div>
-
-  <div class="p-4 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-purple-700 font-semibold mb-1">3. Component Design</div>
-    <div class="text-gray-700 text-sm">
-      Defines the internal structure and behavior of individual software components.
-    </div>
-  </div>
-
-  <div class="p-4 rounded-xl bg-gradient-to-br from-pink-100 to-pink-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-    <div class="text-pink-700 font-semibold mb-1">4. Database Design</div>
-    <div class="text-gray-700 text-sm">
-      Specifies data organization, relationships, and storage strategies.
-    </div>
-  </div>
-</div>
-
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 444.png" alt="Architecture Example">
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
-  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
-    “Agile methods often combine design and implementation, emphasizing working software over detailed design documents.”
-  </div>
-</div>
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 555.png" alt="Programming">
-        </div>
-      </div>
-    </div>
-
-    <!-- 2.2.3 -->
-    <div class="fade-in">
-      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.3 Software Validation</div>
-     <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
   
-  <div class="text-gray-800 text-center italic text-lg leading-relaxed mb-6">
-    “Validation ensures that the software meets requirements and expectations. 
-    Testing is the main validation activity.”
+
+  <p class="text-3xl font-bold text-blue-900 mt-4"> Software Models:</p>
+
+<!-- Introduction Paragraph -->
+<p class="text-justify text-gray-800 mb-6 leading-relaxed mt-4">
+  The first published model of the software development process was derived from
+  more general system engineering processes (Royce, 1970). This model is illustrated
+  in Figure 2.1. Because of the cascade from one phase to another, this model is known
+  as the ‘waterfall model’ or software life cycle. The waterfall model is an example of
+  a plan-driven process—in principle, you must plan and schedule all of the process
+  activities before starting work on them.
+</p>
+
+ <!-- Section Subtitle -->
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-10">
+          The principal stages of the waterfall model directly reflect the fundamental development activities:
+        </h2>
+
+<section>
+<!-- Responsive Interactive Infographic Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+
+  <!-- Card 1 -->
+  <div class="relative bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105 max-w-7xl mx-auto px-6">
+    <!-- Number Tab -->
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-md">
+      01
+    </div>
+    <!-- Icon -->
+    
+    <!-- Title -->
+    <h3 class="text-center font-semibold text-blue-900 mb-2 text-base">Requirements Analysis</h3>
+    <!-- Description -->
+    <p class="text-gray-700 text-sm text-center leading-relaxed">
+      The system’s services, constraints, and goals are defined with users to create a detailed system specification.
+    </p>
   </div>
 
-  <div class="pl-6 space-y-3 text-gray-700">
-    <div class="flex items-start">
-      <div class="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full mr-3 text-sm font-semibold">1</div>
-      <div>Development testing — tests individual components.</div>
+  <!-- Card 2 -->
+  <div class="relative bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-md">
+      02
     </div>
-
-    <div class="flex items-start">
-      <div class="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full mr-3 text-sm font-semibold">2</div>
-      <div>System testing — tests integrated components as a whole.</div>
-    </div>
-
-    <div class="flex items-start">
-      <div class="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full mr-3 text-sm font-semibold">3</div>
-      <div>Acceptance testing — performed by customers before deployment.</div>
-    </div>
+   
+    <h3 class="text-center font-semibold text-blue-900 mb-2 text-base">System & Software Design</h3>
+    <p class="text-gray-700 text-sm text-center leading-relaxed">
+        The systems design process allocates the requirements to either hardware or software systems by establishing an overall system
+        architecture. Software design involves identifying and describing the fundamental software system abstractions and their relationships.
+    </p>
   </div>
 
+  <!-- Card 3 -->
+  <div class="relative bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-md">
+      03
+    </div>
+    <h3 class="text-center font-semibold text-blue-900 mb-2 text-base">Implementation & Testing</h3>
+    <p class="text-gray-700 text-sm text-center leading-relaxed">
+        During this stage, the software design is realized as a set of programs or program units. Unit testing involves verifying that
+        each unit meets its specification.
+    </p>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="relative bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-md">
+      04
+    </div>
+    <h3 class="text-center font-semibold text-blue-900 mb-2 text-base">Integration & System Testing</h3>
+    <p class="text-gray-700 text-sm text-center leading-relaxed">
+        The individual program units or programs
+        are integrated and tested as a complete system to ensure that the software
+        requirements have been met. After testing, the software system is delivered to
+        the customer.
+    </p>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="relative bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-md">
+      05
+    </div>
+
+    <h3 class="text-center font-semibold text-blue-900 mb-2 text-base">Operation & Maintenance</h3>
+    <p class="text-gray-700 text-sm text-center leading-relaxed">
+        Normally (although not necessarily), this is the
+        longest life cycle phase. The system is installed and put into practical use.
+        Maintenance involves correcting errors which were not discovered in earlier
+        stages of the life cycle, improving the implementation of system units and
+        enhancing the system’s services as new requirements are discovered.
+    </p>
+  </div>
+</div>
+        </section>
+
+      <section class="bg-white/90 rounded-xl p-6 shadow-lg border-4 border-blue-200 mb-8 hover:shadow-2xl transition-all duration-300 mt-4">
+    <details class="cursor-pointer">
+        <summary class="text-lg font-semibold text-blue-900 hover:text-blue-700 transition-colors mb-4">
+            About Software Development Phases 
+        </summary>
+        <div class="space-y-4">
+            <p class="text-justify text-gray-800 leading-relaxed">
+                In principle, the result of each phase is one or more documents that are approved
+                (‘signed off’). The following phase should not start until the previous phase has finished. In practice, these stages overlap and feed information to each other. During
+                design, problems with requirements are identified. During coding, design problems
+                are found and so on. The software process is not a simple linear model but involves
+                feedback from one phase to another. Documents produced in each phase may then
+                have to be modified to reflect the changes made.
+            </p>
+
+            <p class="text-justify text-gray-800 leading-relaxed">
+                Because of the costs of producing and approving documents, iterations can be
+                costly and involve significant rework. Therefore, after a small number of iterations,
+                it is normal to freeze parts of the development, such as the specification, and to continue with the later development stages. Problems are left for later resolution,
+                ignored, or programmed around. This premature freezing of requirements may mean
+                that the system won’t do what the user wants. It may also lead to badly structured
+                systems as design problems are circumvented by implementation tricks.
+            </p>
+            
+            <p class="text-justify text-gray-800 leading-relaxed">
+                During the final life cycle phase (operation and maintenance) the software is put
+                into use. Errors and omissions in the original software requirements are discovered.
+                Program and design errors emerge and the need for new functionality is identified.
+                The system must therefore evolve to remain useful. Making these changes (software
+                maintenance) may involve repeating previous process stages.
+            </p>
+        </div>
+    </details>
+</section>
+
+ <section class="bg-white/90 rounded-xl p-6 shadow-lg border-4 border-blue-200 mb-8 hover:shadow-2xl transition-all duration-300 mt-4">
+    <details class="cursor-pointer">
+        <summary class="text-lg font-semibold text-blue-900 hover:text-blue-700 transition-colors mb-4">
+            About the Waterfall Model
+        </summary>
+        <div class="space-y-4">
+            <p class="text-gray-800 text-justify leading-relaxed">
+                The waterfall model is consistent with other engineering process models and documentation is produced at each phase. This makes the process visible so managers can
+                monitor progress against the development plan. Its major problem is the inflexible partitioning of the project into distinct stages. Commitments must be made at an early stage
+                in the process, which makes it difficult to respond to changing customer requirements.
+            </p>
+            <p class="text-gray-800 text-justify leading-relaxed">
+                In principle, the waterfall model should only be used when the requirements are
+                well understood and unlikely to change radically during system development.
+                However, the waterfall model reflects the type of process used in other engineering
+                projects. As is easier to use a common management model for the whole project,
+                software processes based on the waterfall model are still commonly used.
+            </p>
+
+            <p class="text-gray-800 text-justify leading-relaxed">
+                An important variant of the waterfall model is formal system development, where
+                a mathematical model of a system specification is created. This model is then
+                refined, using mathematical transformations that preserve its consistency, into executable code. Based on the assumption that your mathematical transformations are
+                correct, you can therefore make a strong argument that a program generated in this
+                way is consistent with its specification.
+            </p>
+            <p class="text-gray-800 text-justify leading-relaxed">
+                Formal development processes, such as that based on the B method (Schneider,
+                2001; Wordsworth, 1996) are particularly suited to the development of systems that
+                have stringent safety, reliability, or security requirements. The formal approach simplifies the production of a safety or security case. This demonstrates to customers or
+                regulators that the system actually meets its safety or security requirements.
+            </p>
+            <p class="text-gray-800 text-justify leading-relaxed">
+                Processes based on formal transformations are generally only used in the development of safety-critical or security-critical systems. They require specialized
+                expertise. For the majority of systems this process does not offer significant cost-benefits over other approaches to system development.
+            </p>
+        </div>
+    </details>
+</section>
+
+            <section class="bg-white/90 rounded-xl p-6 shadow-lg border-4 border-blue-200 mb-8 
+                         hover:shadow-2xl transition-all duration-300">
+            <article>
+            <!-- Title -->
+            <p class="text-lg font-semibold mb-2 text-blue-900">Cleanroom Software Engineering</p>
+            
+            <!-- Description -->
+            <p class="text-gray-800 text-justify leading-relaxed mb-4">
+              An example of a formal development process, originally developed by IBM, is the Cleanroom process. 
+              In the Cleanroom process each software increment is formally specified and this specification is 
+              transformed into an implementation. Software correctness is demonstrated using a formal approach. 
+              There is no unit testing for defects in the process and the system testing is focused on assessing 
+              the system’s reliability.
+            </p>
+            <p>The objective of the Cleanroom process is zero-defects software so that delivered systems have a high level of reliability.</p>
+        
+              <a href="http://www.SoftwareEngineering-9.com/Web/Cleanroom/" class="inline-flex items-center text-blue-500 hover:text-blue-800 font-medium text-sm transition">
+                      More Info → </a>
+            </a>
+        </article>
+    </section>
+
+   
+           
+            <section class="bg-white/90 rounded-xl p-6 shadow-lg border-4 border-blue-200 mb-8 
+                         hover:shadow-2xl transition-all duration-300">
+            <article>
+        <!-- Title -->
+        <h2 class="text-3xl font-bold text-blue-800 mb-4 text-center">
+          Incremental Software Development
+        </h2>
+      
+        <!-- Description -->
+        <p class="text-blue-900 text-justify leading-relaxed mb-4">
+          Incremental software development, an essential part of agile methods, is more effective than the traditional
+          waterfall model for business, e-commerce, and personal systems. This model follows how we naturally solve problems—
+          step by step—making changes easier and more cost-effective during development.
+        </p>
+      
+        <p class="text-blue-900 text-justify leading-relaxed mb-6">
+          Each increment delivers part of the system’s functionality. The most important features are developed first,
+          allowing customers to see, test, and give feedback early. If modifications are needed, only the current part is changed
+          rather than the entire system.
+        </p>
+      
+        <!-- Subheading -->
+        <h3 class="text-2xl font-semibold text-blue-800 mb-6 text-center">
+          ✅ Benefits of Incremental Development
+        </h3>
+      
+        <!-- Numbered Card List -->
+        <ol class="space-y-4">
+          <li class="flex items-start bg-white shadow-md p-4 rounded-xl border-l-4 border-blue-600 hover:scale-[1.02] hover:bg-blue-50 transition">
+            <span class="text-blue-700 font-bold text-lg mr-3">1.</span>
+            <p class="text-blue-900">
+              Reduced cost of handling changing customer requirements since documentation and redesign efforts are lower.
+            </p>
+          </li>
+
+    <li class="flex items-start bg-white shadow-md p-4 rounded-xl border-l-4 border-blue-600 hover:scale-[1.02] hover:bg-blue-50 transition">
+      <span class="text-blue-700 font-bold text-lg mr-3">2.</span>
+      <p class="text-blue-900">
+        Faster and clearer customer feedback. Clients can interact with working software instead of imagining from documents.
+      </p>
+    </li>
+
+    <li class="flex items-start bg-white shadow-md p-4 rounded-xl border-l-4 border-blue-600 hover:scale-[1.02] hover:bg-blue-50 transition">
+      <span class="text-blue-700 font-bold text-lg mr-3">3.</span>
+      <p class="text-blue-900">
+        Early delivery of usable software. Customers can start using parts of the system before the full product is complete.
+      </p>
+    </li>
+  </ol>
+
+</section>
+           <section class="bg-white/90 rounded-xl p-6 shadow-lg border-4 border-blue-200 mb-8 
+                         hover:shadow-2xl transition-all duration-300 mt-4">
+            <article>
+            <!-- Title -->
+            <p class="text-lg font-semibold mb-2 text-blue-900">Problems with incremental development</p>
+            
+            <!-- Description -->
+            <p class="text-gray-800 text-justify leading-relaxed mb-4">
+            Although incremental development has many advantages, it is not problem-free. The primary cause of the
+            difficulty is the fact that large organizations have bureaucratic procedures that have evolved over time and there
+            may be a mismatch between these procedures and a more informal iterative or agile process.
+            </p>
+            <p class="text-gray-800 text-justify leading-relaxed mb-4">Sometimes these procedures are there for good reasons—for example, there may be procedures to ensure
+            that the software properly implements external regulations (e.g., in the United States, the Sarbanes-Oxley
+            accounting regulations). Changing these procedures may not be possible so process conflicts may be
+            unavoidable.</p>
+        
+            <a href="http://www.SoftwareEngineering-9.com/Web/IncrementalDev" class="inline-flex items-center text-blue-500 hover:text-blue-800 font-medium text-sm transition">
+                    More Info → </a>
+            </a>
+        </article>
+    </section>
+<section class="bg-gradient-to-b from-blue-100 to-blue-200 py-16">
+  <div class="max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl p-8">
+    
+    <!-- Title -->
+    <h2 class="text-3xl font-extrabold text-blue-900 mb-6 text-center uppercase tracking-wide">
+      Incremental Software Development
+    </h2>
+
+    <!-- Content with Fade Animation -->
+    <div class="space-y-4">
+      <p class="text-gray-700 text-justify leading-relaxed">
+        Incremental development in some form is now the most common approach for the development of application systems.
+        This approach can be either plan-driven, agile, or, more usually, a mixture of these approaches. In a plan-driven
+        approach, the system increments are identified in advance; if an agile approach is adopted, the early increments are
+        identified but the development of later increments depends on progress and customer priorities.
+      </p>
+
+      <p class="text-gray-800 font-bold">From a management perspective, the incremental approach has two problems:</p>
+
+      <!-- Interactive List -->
+      <ol class="list-decimal space-y-3 pl-4">
+        <li class="p-4 bg-blue-50 rounded-lg shadow hover:bg-blue-100 hover:shadow-lg transition">
+          <span class="font-bold text-blue-800">Lack of visibility:</span>
+          Managers need regular deliverables to measure progress. If systems are developed quickly, it is not cost-effective
+          to produce documents that reflect every version of the system.
+        </li>
+
+        <li class="p-4 bg-blue-50 rounded-lg shadow hover:bg-blue-100 hover:shadow-lg transition mt-6">
+          <span class="font-bold text-blue-800">Structural degradation:</span>
+          As new increments are added, system structure can degrade. Without refactoring, regular changes make future updates
+          harder, more complex, and costly.
+        </li>
+      </ol>
+
+      <p class="text-gray-700 text-justify leading-relaxed">
+        The problems of incremental development become particularly acute for large, complex, long-lifetime systems, where
+        different teams develop different parts of the system. These systems require a stable architecture, and team
+        responsibilities must be clearly defined in advance rather than developed incrementally.
+      </p>
+
+      <p class="text-gray-700 text-justify leading-relaxed">
+        You can develop a system incrementally and expose it to customers for comment without deploying it in the customer's
+        environment. However, incremental delivery and deployment means real operational use — which can disrupt business
+        processes if not properly planned.
+      </p>
+    </div>
+
+    <!-- Image with Hover Animation -->
+    <div class="mt-8">
+      <img src="/src/assets/images/4th_pic.png" alt="Incremental Development" 
+           class="mx-auto rounded-lg shadow-lg w-full md:w-3/4 transform hover:scale-105 transition">
+    </div>
+  </div>
+</section>
+
+<section class="bg-gradient-to-b from-blue-100 to-blue-200 py-16">
+  <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl p-8" data-aos="fade-up">
+
+    <!-- Title -->
+    <h2 class="text-4xl font-extrabold text-blue-900 text-center uppercase tracking-wide mb-6">
+      Reuse-Oriented Software Engineering
+    </h2>
+
+    <!-- Description -->
+    <p class="text-gray-700 text-justify leading-relaxed mb-4">
+      In most software projects, some form of software reuse occurs. This typically involves developers
+      recalling existing designs or code that are similar to the project's needs, modifying them, and incorporating
+      them into the new system.
+    </p>
+
+    <p class="text-gray-700 text-justify leading-relaxed mb-4">
+      In the 21st century, reuse-focused software development processes have become widespread. These rely on a large
+      collection of reusable software components and a framework to combine them effectively. Some components may even
+      be fully developed systems known as 
+      <span class="font-bold text-blue-800">COTS (Commercial Off-The-Shelf)</span> products.
+    </p>
+
+    <p class="text-gray-700 text-justify leading-relaxed mb-6">
+      Below is a general model of the reuse-based software development process:
+    </p>
+
+    <!-- Stages Title -->
+    <h3 class="text-2xl font-bold text-blue-900 uppercase mb-4 text-center">Development Stages</h3>
+
+    <!-- Interactive Stages List -->
+    <ol class="list-decimal list-inside space-y-4">
+      <li class="p-4 bg-blue-50 rounded-lg shadow hover:shadow-lg hover:bg-blue-100 transition">
+        <span class="font-bold text-blue-800">Component Analysis:</span>
+        Search for reusable components that can satisfy system requirements.
+      </li>
+
+      <li class="p-4 bg-blue-50 rounded-lg shadow hover:shadow-lg hover:bg-blue-100 transition">
+        <span class="font-bold text-blue-800">Requirements Modification:</span>
+        Adapt requirements based on available components. If unsuitable, repeat component analysis.
+      </li>
+
+      <li class="p-4 bg-blue-50 rounded-lg shadow hover:shadow-lg hover:bg-blue-100 transition">
+        <span class="font-bold text-blue-800">Development & Integration:</span>
+        Develop missing parts and integrate reusable components and COTS systems.
+      </li>
+
+      <li class="p-4 bg-blue-50 rounded-lg shadow hover:shadow-lg hover:bg-blue-100 transition">
+        <span class="font-bold text-blue-800">System Design with Reuse:</span>
+        Design or reuse an existing system framework while organizing reusable components appropriately.
+      </li>
+    </ol>
+  </div>
+</section>
+
+    <p class="text-3xl font-bold text-blue-900 uppercase tracking-wide text-center">
+    There are three types of software component that may be used in a reuse-oriented process:
+    </p>
+    <!-- kulang pictures kagroup-->
+
+    <section class="mt-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="relative bg-white/90 rounded-xl shadow-lg p-6 border border-blue-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white font-semibold rounded-full px-3 py-1 shadow-md">
+        01
+      </div>
+      <h3 class="text-center text-blue-900 font-semibold mb-3 mt-2">Web Services</h3>
+      <p class="text-gray-700 text-sm text-center leading-relaxed">
+        Web services that are developed according to service standards and which are available for remote invocation.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative bg-white/90 rounded-xl shadow-lg p-6 border border-blue-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white font-semibold rounded-full px-3 py-1 shadow-md">
+        02
+      </div>
+      <h3 class="text-center text-blue-900 font-semibold mb-3 mt-2">Remote Invocation</h3>
+      <p class="text-gray-700 text-sm text-center leading-relaxed">
+        Web services that are developed according to service standards and which are available for remote invocation.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative bg-white/90 rounded-xl shadow-lg p-6 border border-blue-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white font-semibold rounded-full px-3 py-1 shadow-md">
+        03
+      </div>
+      <h3 class="text-center text-blue-900 font-semibold mb-3 mt-2">Stand-alone Systems</h3>
+      <p class="text-gray-700 text-sm text-center leading-relaxed">
+        Stand-alone software systems that are configured for use in a particular environment.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+ <section class="bg-gradient-to-b from-blue-50 to-blue-100 py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900 uppercase tracking-wide">Why Reuse-Oriented Software Engineering?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-2 rounded-full"></div>
+            </div>
+            <!-- Content Box -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-blue-200 hover:shadow-2xl transition-all duration-300 mb-8">
+                <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                    Reuse-oriented software engineering has the obvious advantage of reducing the amount of software that needs to be developed, which helps in lowering development cost and minimizing risks. It also enables faster delivery of software products.
+                </p>
+                <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                    However, because it uses existing software components, compromises in requirements are sometimes necessary. These compromises might lead to systems that do not fully meet user needs. Also, control over software evolution may be reduced, especially when updates to reused components are managed by external organizations.
+                </p>
+            </div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+    <!-- Advantages -->
+    <details class="group bg-white p-6 rounded-2xl shadow-md border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+        <summary class="flex items-center space-x-4 cursor-pointer">
+            <span class="text-blue-600 text-3xl">✅</span>
+            <h3 class="text-xl font-semibold text-blue-900 group-hover:text-blue-600">Advantages</h3>
+        </summary>
+        <div class="mt-4 text-gray-700 text-justify leading-relaxed space-y-2">
+            <p>✔ Reduces cost and development effort</p>
+            <p>✔ Faster delivery of software</p>
+            <p>✔ Lower risks due to pre-tested components</p>
+        </div>
+    </details>
+
+    <!-- Disadvantages -->
+    <details class="group bg-white p-6 rounded-2xl shadow-md border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+        <summary class="flex items-center space-x-4 cursor-pointer">
+            <span class="text-blue-600 text-3xl">⚠️</span>
+            <h3 class="text-xl font-semibold text-blue-900 group-hover:text-blue-600">Disadvantages</h3>
+        </summary>
+        <div class="mt-4 text-justify leading-relaxed space-y-2">
+            <p>⚠ May not fully meet user requirements</p>
+            <p>⚠ Dependency on third-party components</p>
+            <p>⚠ Harder to control evolution and updates</p>
+        </div>
+    </details>
 </div>
 
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 666.png" alt="Validation">
+            <!-- Extra Info with Highlight -->
+            <div class="mt-4 p-6 bg-blue-800 text-white rounded-xl shadow-md hover:scale-[1.02] transition duration-300">
+                <p class="text-justify leading-relaxed text-blue-600">
+                    Software reuse is highly important, and multiple chapters in the book are devoted to it. Chapter 16 explores general software reuse and COTS systems, Chapters 17 and 18 focus on component-based software engineering, and Chapter 19 discusses service-oriented systems.
+                </p>
+            </div>
         </div>
+    </section>
+        </section>
+        </main>
+
+        
+<section class="rounded-xl p-6 shadow-lg border border-blue-200 mb-8 border-4">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-blue-900">Our Team</h2>
+          <p class="font-light lg:mb-16 sm:text-xl dark:text-gray-800">
+              Our strength lies in teamwork, creativity, and the pursuit of continuous improvement.
+              Together, we make things happen — one idea, one project, one goal at a time.
+          </p>
+      </div> 
+
+      <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+
+          <!-- Member 1 -->
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/1_DEGUZMAN.jpg" alt="Mat Jannus S. De Guzman">
+              </a>
+              <div class="p-5">
+                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      <a href="https://www.facebook.com/matjannus">Mat Jannus S. De Guzman</a>
+                  </h3>
+                  <span class="text-gray-500 dark:text-gray-400">BSIT | 3102</span>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Comfortable collaborating with teammates and open to feedback to enhance project outcomes.</p>
+              </div>
+          </div> 
+
+          <!-- Member 2 -->
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/LAGURAS.jpg" alt="Hazel V. Laguras">
+              </a>
+              <div class="p-5">
+                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      <a href="https://www.facebook.com/hzllgrs">Hazel V. Laguras</a>
+                  </h3>
+                  <span class="text-gray-500 dark:text-gray-400">BSIT | 3102</span>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Eager to learn new technologies and frameworks to contribute more effectively to team projects.</p>
+              </div>
+          </div> 
+
+          <!-- Member 3 -->
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/1_ELOLA.jpg" alt="Isabella Grace M. Elola">
+              </a>
+              <div class="p-5">
+                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      <a href="https://www.facebook.com/Elolaisabellagrace">Isabella Grace M. Elola</a>
+                  </h3>
+                  <span class="text-gray-500 dark:text-gray-400">BSIT | 3102</span>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Continuously learning and improving skills in web development and user-friendly design.</p>
+              </div>
+          </div> 
+
+          <!-- Member 4 -->
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                  <img class="w-full h-64 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/1_PATAL.jpg" alt="Mark Angelo G. Patal">
+              </a>
+              <div class="p-5">
+                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      <a href="https://www.facebook.com/angelo.patal.71">Mark Angelo G. Patal</a>
+                  </h3>
+                  <span class="text-gray-500 dark:text-gray-400">BSIT | 3102</span>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Eager to learn new technologies and frameworks to contribute more effectively to team projects.</p>
+              </div>
+          </div> 
+
+      </div>  
+  </div>
+</section>
+
+            <!-- Footer -->
+  <footer class="bg-gradient-to-br from-blue-800 to-blue-500 text-white shadow-inner">
+    <div class="container mx-auto px-4 py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Members -->
+      <div class="bg-white/10 rounded-2xl p-6">
+        <h3 class="font-bold text-xl text-white mb-4">SISTIM MEMBERS</h3>
+        <ul class="space-y-2 text-blue-200">
+          <li>Mark Angelo G. Patal</li>
+          <li>Isabella Grace M. Elola</li>
+          <li>Mat Jannus S. De Guzman</li>
+          <li>Hazel V. Laguras</li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="bg-white/10 rounded-2xl p-6">
+        <h3 class="font-bold text-xl text-white mb-4">Quick Navigation</h3>
+        <ul class="space-y-2 text-blue-200">
+          <li><a href="/Software.html" class="hover:text-white">Chapter 2.1</a></li>
+          <li><a href="/process activities.html" class="hover:text-white">Chapter 2.2</a></li>
+          <li><a href="/Coping with change.html" class="hover:text-white">Chapter 2.3</a></li>
+          <li><a href="/UnfiedProcess.html" class="hover:text-white">Chapter 2.4</a></li>
+        </ul>
+      </div>
+
+      <!-- Course Info -->
+      <div class="bg-white/10 rounded-2xl p-6">
+        <h3 class="font-bold text-xl text-white mb-4">Course Info</h3>
+        <p class="text-blue-200">Software Engineering</p>
+        <p class="text-blue-200">Chapter 2: Software Processes</p>
+        <p class="text-blue-200">Academic Year: 2025</p>
       </div>
     </div>
 
-    <!-- 2.2.4 -->
-    <div class="fade-in">
-      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.4 Software Evolution</div>
-      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
-  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
-    “Software evolves as requirements, technologies, and user needs change.
-    Maintenance and evolution are vital to ensuring the software remains relevant.”
-  </div>
-</div>
-
-
-      <div class="flex justify-center my-6">
-        <div class="image-frame max-w-lg">
-          <img src="/src/assets/images/AA 888.png" alt="Evolution">
-        </div>
-      </div>
+    <div class="border-t border-blue-500 pt-6 text-center text-blue-200 text-sm">
+      © 2025 SISTIM. Built with passion for software engineering education.
     </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="bg-blue-800 text-white text-center py-8">
-    <div class="font-semibold text-lg mb-4">SISTIM Members</div>
-    <div>Mark Angelo G. Patal</div>
-    <div>Isabella Grace M. Elola</div>
-    <div>Mat Jannus S. De Guzman</div>
-    <div>Hazel V. Laguras</div>
-    <div class="mt-4 text-sm text-blue-200">© 2025 SISTIM | Software Engineering</div>
-  </div>
-
-  <!-- JS for menu + animation -->
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    // Fade-in on scroll
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => observer.observe(el));
-  </script>
-
+  </footer>
 </body>
 </html>
